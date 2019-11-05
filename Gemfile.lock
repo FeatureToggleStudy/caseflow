@@ -46,15 +46,6 @@ GIT
       savon (~> 2.12)
 
 GIT
-  remote: https://github.com/department-of-veterans-affairs/sniffybara.git
-  revision: 45a537252d60c12f76dc58924f12e47bac260fc8
-  branch: mb-update-capybara-click
-  specs:
-    sniffybara (0.0.1)
-      rainbow
-      selenium-webdriver
-
-GIT
   remote: https://github.com/senny/pdfjs_viewer-rails.git
   revision: a4249eacbf70175db63b57e9f364d0a9a79e2b43
   ref: a4249eacbf70175db63b57e9f364d0a9a79e2b43
@@ -62,6 +53,13 @@ GIT
     pdfjs_viewer-rails (0.0.9)
       rails (> 4.2.0)
       sass-rails (~> 5.0)
+
+PATH
+  remote: /Users/alisanguyen/sniffybara
+  specs:
+    sniffybara (0.0.1)
+      rainbow
+      selenium-webdriver
 
 GEM
   remote: https://rubygems.org/

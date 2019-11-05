@@ -8,6 +8,7 @@ require "webdrivers"
 Webdrivers.logger.level = :DEBUG if ENV["DEBUG"]
 
 Sniffybara::Driver.configuration_file = File.expand_path("VA-axe-configuration.json", __dir__)
+puts __dir__
 
 download_directory = Rails.root.join("tmp/downloads_#{ENV['TEST_SUBCATEGORY'] || 'all'}")
 cache_directory = Rails.root.join("tmp/browser_cache_#{ENV['TEST_SUBCATEGORY'] || 'all'}")
@@ -28,6 +29,7 @@ Capybara.register_driver(:parallel_sniffybara) do |app|
 
   chrome_options.add_preference(:browser,
                                 disk_cache_dir: cache_directory)
+  chrome_options.args << "--headless"
 
   options = {
     port: 51_674,
