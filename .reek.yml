@@ -43,7 +43,6 @@ detectors:
       - ApplicationRecord#as_hash
       - AsyncableJobsReporter
       - ClaimReviewAsyncStatsReporter#as_csv
-      - ClaimReviewAsyncStatsReporter#seconds_to_hms
       - DataIntegrityChecksJob
       - DecisionIssueSyncJob
       - Fakes::EndProductStore
@@ -101,6 +100,7 @@ detectors:
   UtilityFunction:
     public_methods_only: true
     exclude:
+      - ClaimReviewAsyncStatsReporter#seconds_to_hms
       - HearingAdminActionVerifyAddressTask#available_hearing_admin_actions
       - HearingDispositionChangeJob
       - Helpers::AppealHearingHelper#available_hearing_locations
